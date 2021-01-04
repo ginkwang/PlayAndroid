@@ -20,7 +20,37 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:bvp_auto_play="false"
-            app:bvp_can_loop="false"/>
+            app:bvp_can_loop="false"
+            app:bvp_indicator_checked_color="@color/accent"
+            app:bvp_indicator_gravity="center"
+            app:bvp_indicator_normal_color="@color/white"
+            app:bvp_indicator_slide_mode="worm"
+            app:bvp_indicator_style="circle"/>
+
+        <TextView
+            android:id="@+id/tv_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:text="立即进入"
+            drawable_radius="@{8}"
+            drawable_solidColor="@{@color/accent}"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:onClick="@{()->click.toMain()}"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/splash_logo"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"/>
 
     </RelativeLayout>
 </layout>

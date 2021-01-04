@@ -4,6 +4,8 @@ import android.app.Application
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
+import androidx.multidex.MultiDex
+import com.tencent.mmkv.MMKV
 
 /**
  * @author: wang-gk
@@ -11,6 +13,10 @@ import androidx.lifecycle.ViewModelStoreOwner
  * @desc:   自定义application
  */
 open class App : Application(), ViewModelStoreOwner {
+
+    companion object {
+        lateinit var instance: App
+    }
 
     private lateinit var mAppViewModelStore: ViewModelStore
 
@@ -23,6 +29,9 @@ open class App : Application(), ViewModelStoreOwner {
     override fun onCreate() {
         super.onCreate()
         mAppViewModelStore = ViewModelStore()
+        instance = this
+        MultiDex.install(this)
+        MMKV.initialize(this.filesDir.absolutePath + "/mmkv")
     }
 
     /**

@@ -10,16 +10,23 @@ import com.zhpan.bannerview.BaseViewHolder
 /**
  * @author: wang-gk
  * @date:   2021/1/4
- * @desc:
+ * @desc:   引导页适配器
  */
 class SplashBannerAdapter : BaseBannerAdapter<String, SplashBannerAdapter.BannerViewHolder>() {
+
+    private var bannerBgList = arrayOf(
+        Utils.getApp().getColor(R.color.colorAccent),
+        Utils.getApp().getColor(R.color.accent),
+        Utils.getApp().getColor(R.color.teal_200),
+        Utils.getApp().getColor(R.color.purple_200)
+    )
 
     inner class BannerViewHolder(view: View) : BaseViewHolder<String>(view) {
         override fun bindData(data: String?, position: Int, pageSize: Int) {
             val textView = findView<TextView>(R.id.banner_view)
             textView.apply {
                 text = data
-                setBackgroundColor(Utils.getApp().getColor(R.color.colorAccent))
+                setBackgroundColor(bannerBgList[position])
             }
         }
     }

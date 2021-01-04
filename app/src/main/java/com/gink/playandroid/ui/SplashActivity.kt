@@ -9,6 +9,9 @@ import com.gink.playandroid.R
 import com.gink.playandroid.databinding.ActivitySplashBinding
 import com.gink.playandroid.mvvm.base.BaseActivity
 import com.gink.playandroid.mvvm.base.BaseViewModel
+import com.gink.playandroid.mvvm.ext.gone
+import com.gink.playandroid.mvvm.ext.visible
+import com.gink.playandroid.mvvm.ext.visibleOrGone
 import com.gink.playandroid.util.CacheUtil
 import com.gink.playandroid.weight.banner.SplashBannerAdapter
 import com.zhpan.bannerview.BannerViewPager
@@ -38,18 +41,28 @@ class SplashActivity : BaseActivity<BaseViewModel, ActivitySplashBinding>() {
             return
         }
         mDatabind.click = ProxyClick()
-        mDatabind.banner.apply {
-            setAdapter(SplashBannerAdapter())
-            setLifecycleRegistry(lifecycle)
-            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-                override fun onPageSelected(position: Int) {
-                    super.onPageSelected(position)
-
-                }
-            })
-            create(bannerTextList.toList())
+        if (CacheUtil.isFirstOpen()) {
+            mDatabind.splashLogo.gone()
+            mDatabind.banner.apply {
+                setAdapter(SplashBannerAdapter())
+                setLifecycleRegistry(lifecycle)
+                registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                    override fun onPageSelected(position: Int) {
+                        super.onPageSelected(position)
+                        mDatabind.tvEnter.visibleOrGone(position == (bannerTextList.size - 1))
+                    }
+                })
+                create(bannerTextList.toList())
+            }
+        } else {
+            mDatabind.splashLogo.visible()
+            mDatabind.banner.postDelayed({
+                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                finish()
+                //带点渐变动画
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            }, 300)
         }
-
     }
 
     override fun createObserver() {
