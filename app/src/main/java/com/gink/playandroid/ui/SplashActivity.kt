@@ -39,9 +39,9 @@ class SplashActivity : BaseActivity<BaseViewModel, ActivitySplashBinding>() {
         }
         mDatabind.click = ProxyClick()
         mDatabind.banner.apply {
-           setAdapter(SplashBannerAdapter())
+            setAdapter(SplashBannerAdapter())
             setLifecycleRegistry(lifecycle)
-            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
 
