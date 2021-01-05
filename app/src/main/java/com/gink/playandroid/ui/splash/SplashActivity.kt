@@ -13,6 +13,7 @@ import com.gink.playandroid.mvvm.ext.visibleOrGone
 import com.gink.playandroid.ui.main.MainActivity
 import com.gink.playandroid.util.CacheUtil
 import com.gink.playandroid.weight.adapter.SplashBannerAdapter
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : BaseActivity<BaseViewModel, ActivitySplashBinding>() {
 
@@ -40,21 +41,21 @@ class SplashActivity : BaseActivity<BaseViewModel, ActivitySplashBinding>() {
         }
         mDatabind.click = ProxyClick()
         if (CacheUtil.isFirstOpen()) {
-            mDatabind.splashLogo.gone()
+            splash_logo.gone()
             mDatabind.banner.apply {
                 setAdapter(SplashBannerAdapter())
                 setLifecycleRegistry(lifecycle)
                 registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
                     override fun onPageSelected(position: Int) {
                         super.onPageSelected(position)
-                        mDatabind.tvEnter.visibleOrGone(position == (bannerTextList.size - 1))
+                        tv_enter.visibleOrGone(position == (bannerTextList.size - 1))
                     }
                 })
                 create(bannerTextList.toList())
             }
         } else {
-            mDatabind.splashLogo.visible()
-            mDatabind.banner.postDelayed({
+            splash_logo.visible()
+            banner.postDelayed({
                 startActivity(Intent(this@SplashActivity, MainActivity::class.java))
                 finish()
                 //带点渐变动画
