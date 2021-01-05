@@ -84,7 +84,7 @@ abstract class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> : Fragment
     /**
      * 懒加载
      */
-    abstract fun lazyLoadData()
+    open fun lazyLoadData(){}
 
     /**
      * 创建观察者

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PlayAndroid</string>
+
+    <string name="bottom_flow">知识流</string>
+    <string name="bottom_project">知识库</string>
+    <string name="bottom_me">我</string>
 </resources>

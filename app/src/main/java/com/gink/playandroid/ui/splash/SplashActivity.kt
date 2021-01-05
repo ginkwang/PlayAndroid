@@ -1,10 +1,8 @@
-package com.gink.playandroid.ui
+package com.gink.playandroid.ui.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
-import com.blankj.utilcode.util.ActivityUtils.startActivity
 import com.gink.playandroid.R
 import com.gink.playandroid.databinding.ActivitySplashBinding
 import com.gink.playandroid.mvvm.base.BaseActivity
@@ -12,9 +10,9 @@ import com.gink.playandroid.mvvm.base.BaseViewModel
 import com.gink.playandroid.mvvm.ext.gone
 import com.gink.playandroid.mvvm.ext.visible
 import com.gink.playandroid.mvvm.ext.visibleOrGone
+import com.gink.playandroid.ui.main.MainActivity
 import com.gink.playandroid.util.CacheUtil
-import com.gink.playandroid.weight.banner.SplashBannerAdapter
-import com.zhpan.bannerview.BannerViewPager
+import com.gink.playandroid.weight.adapter.SplashBannerAdapter
 
 class SplashActivity : BaseActivity<BaseViewModel, ActivitySplashBinding>() {
 

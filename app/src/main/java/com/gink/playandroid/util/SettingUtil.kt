@@ -63,14 +63,14 @@ object SettingUtil {
     }
 
     fun getColorStateList(context: Context): ColorStateList {
-        val colors = intArrayOf(getColor(context), ContextCompat.getColor(context, R.color.colorGray))
+        val colors = intArrayOf(getColor(context), ContextCompat.getColor(context, R.color.colorNoSelect))
         val states = arrayOfNulls<IntArray>(2)
         states[0] = intArrayOf(android.R.attr.state_checked, android.R.attr.state_checked)
         states[1] = intArrayOf()
         return ColorStateList(states, colors)
     }
     fun getColorStateList(color: Int): ColorStateList {
-        val colors = intArrayOf(color, ContextCompat.getColor(Utils.getApp(), R.color.colorGray))
+        val colors = intArrayOf(color, ContextCompat.getColor(Utils.getApp(), R.color.colorNoSelect))
         val states = arrayOfNulls<IntArray>(2)
         states[0] = intArrayOf(android.R.attr.state_checked, android.R.attr.state_checked)
         states[1] = intArrayOf()

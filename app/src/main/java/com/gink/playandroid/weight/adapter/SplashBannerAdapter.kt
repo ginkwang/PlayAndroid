@@ -1,4 +1,4 @@
-package com.gink.playandroid.weight.banner
+package com.gink.playandroid.weight.adapter
 
 import android.view.View
 import android.widget.TextView
@@ -16,9 +16,9 @@ class SplashBannerAdapter : BaseBannerAdapter<String, SplashBannerAdapter.Banner
 
     private var bannerBgList = arrayOf(
         Utils.getApp().getColor(R.color.colorAccent),
-        Utils.getApp().getColor(R.color.accent),
-        Utils.getApp().getColor(R.color.teal_200),
-        Utils.getApp().getColor(R.color.purple_200)
+        Utils.getApp().getColor(R.color.colorWhite),
+        Utils.getApp().getColor(R.color.colorBackground),
+        Utils.getApp().getColor(R.color.colorPrimary)
     )
 
     inner class BannerViewHolder(view: View) : BaseViewHolder<String>(view) {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_flow"
+        android:checked="true"
+        android:icon="@mipmap/ic_bottom_flow"
+        android:title="@string/bottom_flow" />
+
+    <item
+        android:id="@+id/menu_project"
+        android:icon="@mipmap/ic_bottom_project"
+        android:title="@string/bottom_project" />
+
+    <item
+        android:id="@+id/menu_me"
+        android:icon="@mipmap/ic_bottom_me"
+        android:title="@string/bottom_me" />
+</menu>

@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:text="hello"
         android:textSize="50dp"
-        android:textColor="@color/black"
+        android:textColor="@color/colorText1"
         android:gravity="center"
         />
 

@@ -1,4 +1,4 @@
-package com.gink.playandroid.ui
+package com.gink.playandroid.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -66,7 +66,8 @@ dependencies {
     api 'com.kunminx.archi:unpeek-livedata:4.4.1-beta1'
 
     //navigation
-    api 'androidx.navigation:navigation-runtime-ktx:2.3.1'
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.1"
+    implementation 'androidx.navigation:navigation-runtime-ktx:2.3.1'
 
     //retrofit
     api "com.squareup.retrofit2:retrofit:2.9.0"
@@ -87,4 +88,7 @@ dependencies {
 
     // banner
     implementation 'com.github.zhpanvip:BannerViewPager:3.1.5'
+
+    //底部bottomBar
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
 }

@@ -7,13 +7,13 @@
 
         <variable
             name="click"
-            type="com.gink.playandroid.ui.SplashActivity.ProxyClick" />
+            type="com.gink.playandroid.ui.splash.SplashActivity.ProxyClick" />
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.SplashActivity">
+        tools:context=".ui.splash.SplashActivity">
 
         <com.zhpan.bannerview.BannerViewPager
             android:id="@+id/banner"
@@ -21,9 +21,9 @@
             android:layout_height="match_parent"
             app:bvp_auto_play="false"
             app:bvp_can_loop="false"
-            app:bvp_indicator_checked_color="@color/accent"
+            app:bvp_indicator_checked_color="@color/colorAccent"
             app:bvp_indicator_gravity="center"
-            app:bvp_indicator_normal_color="@color/white"
+            app:bvp_indicator_normal_color="@color/colorWhite"
             app:bvp_indicator_slide_mode="worm"
             app:bvp_indicator_style="circle"/>
 
@@ -34,11 +34,11 @@
             android:layout_marginBottom="72dp"
             android:text="立即进入"
             drawable_radius="@{8}"
-            drawable_solidColor="@{@color/accent}"
+            drawable_solidColor="@{@color/colorAccent}"
             android:paddingHorizontal="12dp"
             android:paddingVertical="8dp"
             android:onClick="@{()->click.toMain()}"
-            android:textColor="@color/white"
+            android:textColor="@color/colorWhite"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:visibility="gone"
