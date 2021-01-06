@@ -28,6 +28,7 @@ class MainFragment : BaseFragment<MainViewModel, FragmentMainBinding>() {
     }
 
     override fun initView(savedInstanceState: Bundle?) {
+        Log.i("MainFragment", "initView: ")
         main_view_pager.apply {
             isUserInputEnabled = true
             offscreenPageLimit = 3
@@ -99,5 +100,15 @@ class MainFragment : BaseFragment<MainViewModel, FragmentMainBinding>() {
         iv_left_icon.invisible()
         ll_search.invisible()
         iv_right_icon.visible()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("MainFragment", "onResume: ")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("MainFragment", "onPause: ")
     }
 }

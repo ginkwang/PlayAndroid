@@ -1,4 +1,4 @@
-package com.gink.playandroid.mvvm.network
+package com.gink.playandroid.mvvm.network.handle
 
 /**
  * @author: wang-gk

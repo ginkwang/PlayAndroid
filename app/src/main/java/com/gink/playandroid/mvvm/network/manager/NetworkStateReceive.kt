@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
-import com.gink.playandroid.mvvm.network.NetworkUtil
+import com.gink.playandroid.mvvm.network.handle.NetworkUtil
 
 /**
  * @author: wang-gk

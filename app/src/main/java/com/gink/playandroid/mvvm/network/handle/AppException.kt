@@ -1,4 +1,4 @@
-package com.gink.playandroid.mvvm.network
+package com.gink.playandroid.mvvm.network.handle
 
 /**
  * @author: wang-gk
@@ -17,7 +17,7 @@ class AppException : Exception {
         this.errorLog = errorLog?:this.errorMsg
     }
 
-    constructor(error: Error,e: Throwable?) {
+    constructor(error: Error, e: Throwable?) {
         errCode = error.getKey()
         errorMsg = error.getValue()
         errorLog = e?.message
