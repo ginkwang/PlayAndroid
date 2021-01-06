@@ -13,13 +13,17 @@
     <!--分割线色-->
     <color name="colorDiver">#a2a3a7</color>
     <!--黑色-->
-    <color name="colorBlack">#FF000000</color>
+    <color name="colorBlack">#000000</color>
     <!--白色-->
-    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <!--白色 30%不透明度-->
+    <color name="colorWhite30">#4DFFFFFF</color>
     <!--背景色-->
     <color name="colorBackground">#F5F5F5</color>
     <!--一级文本色-->
     <color name="colorText1">#424242</color>
     <!--二级文本色-->
     <color name="colorText2">#757575</color>
+    <!--搜索框背景色-->
+    <color name="colorSearchBg">#33757575</color>
 </resources>
